@@ -158,7 +158,7 @@ main {
 
 .second-section {
     width: 100%;
-    background-image: url(../images/background-section2.jpg);
+    background-image: url(./background-section2.jpg);
     padding: 50px 20px;
     position: relative;
     text-align: center;
@@ -231,7 +231,7 @@ main {
     align-items: stretch;
     padding: 50px 0;
     
-    background-image: url('../images/background-section2.jpg'); /* Altere para o caminho da sua imagem de fundo */
+    background-image: url('./background-section2.jpg'); /* Altere para o caminho da sua imagem de fundo */
     background-size: cover;
     background-position: center;
     position: relative;
