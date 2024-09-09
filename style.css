@@ -657,16 +657,26 @@ main {
     .service-cards {
         flex-direction: column;
         align-items: center;
+        margin: 0;
     }
 
     .card {
-        display: flex;
-        align-items: center;
-        width: 280%;
-        margin-bottom: 20px;
-        flex-direction: column;
+        width: 100%; /* Faz o card ocupar toda a largura disponível */
+        max-width: 90%; /* Limita a largura para evitar que fique muito grande */
+        margin: 20px 0; /* Espaçamento entre os cards */
+        box-sizing: border-box;
     }
 
+    .card img {
+        width: 100%; /* Faz a imagem ocupar toda a largura do card */
+        height: auto;
+    }
+
+    .card-content {
+        padding: 20px;
+        text-align: center;
+    }
+    
     .content-box .image img{
         border-radius: 0px 0px;
 
@@ -674,45 +684,7 @@ main {
     .content-box2 .image img{
         border-radius: 0px 0px;
     }
-}
 
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo img {
-        width: 180px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-    
-    .contact-button {
-        margin-top: 20px;
-    }
-
-    main p {
-        font-size: 2.4rem;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
     .three-column-section {
         flex-direction: column;
         padding: 20px 10px;
@@ -789,6 +761,43 @@ main {
     }
 }
 
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .contact-button {
+        margin-top: 20px;
+    }
+
+    main p {
+        font-size: 2.4rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+}
+
+
 @media (max-width: 480px) {
     header {
         padding: 10px 20px;
@@ -806,5 +815,16 @@ main {
         font-size: 1rem;
         padding: 10px 20px;
     }
-}
+    .card {
+        max-width: 100%; /* Ocupa toda a largura em telas menores */
+        margin-bottom: 20px;
+    }
 
+    .card-content h3 {
+        font-size: 1.3rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .card-content p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+}
