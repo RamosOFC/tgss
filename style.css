@@ -662,7 +662,7 @@ main {
     .card {
         display: flex;
         align-items: center;
-        width: 180%;
+        width: 280%;
         margin-bottom: 20px;
         flex-direction: column;
     }
