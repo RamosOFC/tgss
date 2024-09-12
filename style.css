@@ -828,3 +828,79 @@ main {
         font-size: 0.9rem; /* Reduz o tamanho do texto */
     }
 }
+.section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.banner-text {
+    max-width: 50%;
+}
+
+.banner-text p {
+    font-size: 3.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin-left: 10px;
+    color: var(--branco);
+}
+
+.banner-text p span {
+    font-size: 3.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--branco);
+}
+
+.banner-image {
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+    .section-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-image {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-text p {
+        font-size: 2.4rem;
+    }
+
+    .banner-image {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text p {
+        font-size: 1.8rem;
+    }
+
+    .banner-image {
+        max-width: 100%;
+    }
+}
