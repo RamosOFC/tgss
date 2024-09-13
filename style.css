@@ -8,6 +8,20 @@
   
   }
 
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    background-color: #4c0f1d;
+    position: fixed; /* Torna a navbar fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que a navbar fique sobre o conteúdo da página */
+}
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -16,16 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    box-sizing: border-box;
-    background-color: #4c0f1d;
+    padding-top: 100px; /* Adiciona espaçamento para evitar que o conteúdo fique escondido atrás da navbar */
 }
 
 .logo {
@@ -830,22 +835,29 @@ main {
 }
 .section-1 {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
     padding: 50px;
-    box-sizing: border-box;
     position: relative;
+    height: 100vh; /* Faz com que a section ocupe a altura total da viewport */
+    background-image: url('./family.png');
+    background-size: cover; /* Cobre toda a área do container */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--branco); /* Garante que o texto tenha uma boa legibilidade */
 }
 
 .banner-text {
-    max-width: 50%;
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .banner-text p {
     font-size: 3.4rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    margin-left: 10px;
     color: var(--branco);
 }
 
@@ -853,56 +865,63 @@ main {
     font-size: 3.4rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin-left: 10px;
     color: var(--branco);
 }
 
-.banner-image {
-    max-width: 45%;
+.cta-button {
     display: flex;
-    justify-content: flex-end;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 3px solid #96C7B6;
+    border-radius: 5px;
+    color: var(--branco);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
 }
 
-.banner-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.cta-button:hover {
+    background-color: #96C7B6;
 }
 
+/* Responsividade */
 @media (max-width: 1024px) {
-    .section-1 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .banner-text {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .banner-image {
-        max-width: 70%;
+    .banner-text p {
+        font-size: 2.4rem;
     }
 }
 
 @media (max-width: 768px) {
-    .banner-text p {
-        font-size: 2.4rem;
+    .section-1 {
+        padding: 20px;
+        background-position: top;
     }
 
-    .banner-image {
-        max-width: 100%;
-        margin-bottom: -50px;
+    .banner-text p {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
+    .section-1 {
+        height: 70vh; /* Reduz a altura da seção para telas menores */
+    }
+
     .banner-text p {
         font-size: 1.8rem;
     }
 
-    .banner-image {
-        max-width: 100%;
-        margin-bootom: -50px;
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
