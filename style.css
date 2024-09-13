@@ -4,14 +4,12 @@
     --vermelho: #621927;
     --verde: #31C3C8;
     --branco: #fff;
-    
-  
   }
 
   header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px 50px;
     box-sizing: border-box;
@@ -19,18 +17,20 @@
     position: fixed; /* Torna a navbar fixa no topo */
     top: 0;
     left: 0;
+    
     z-index: 1000; /* Garante que a navbar fique sobre o conteúdo da página */
 }
 
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: var(--vermelho);
+    background: url(./background.png);
     color: var(--branco);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px; /* Adiciona espaçamento para evitar que o conteúdo fique escondido atrás da navbar */
+    
 }
 
 .logo {
@@ -134,27 +134,6 @@ main h1 span {
 
 
 /*sessão 2*/
-body {
-    margin: 0;
-    
-    font-family: 'Arial', sans-serif;
-    background-color: var(--vermelho);
-    color: var(--branco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    box-sizing: border-box;
-    background-color: #4c0f1d;
-}
-
 main {
     text-align: center;
     margin-top: 100px;
@@ -235,7 +214,6 @@ main {
     justify-content: center;
     align-items: stretch;
     padding: 50px 0;
-    
     background-image: url('./background-section2.jpg'); /* Altere para o caminho da sua imagem de fundo */
     background-size: cover;
     background-position: center;
@@ -913,11 +891,13 @@ main {
 
 @media (max-width: 480px) {
     .section-1 {
-        height: 70vh; /* Reduz a altura da seção para telas menores */
+        background-image: url(./family-mobile.png);
+        
     }
 
-    .banner-text p {
+    .banner-text {
         font-size: 1.8rem;
+        margin-bottom: 200px;
     }
 
     .cta-button {
