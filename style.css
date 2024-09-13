@@ -4,6 +4,8 @@
     --vermelho: #621927;
     --verde: #31C3C8;
     --branco: #fff;
+    
+  
   }
 
   header {
@@ -872,7 +874,6 @@ main {
         font-size: 2.4rem;
     }
 }
-
 @media (max-width: 768px) {
     .section-1 {
         padding: 20px;
